@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF--8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Merch Genesis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#007AFF',
+              'primary-hover': '#005ECC',
+              'light-bg': '#F5F5F7',
+              'content-bg': '#FFFFFF',
+              'text-primary': '#1D1D1F',
+              'text-secondary': '#6E6E73',
+              'border-color': 'rgba(0, 0, 0, 0.1)',
+              'element-bg': '#F0F0F0',
+              'error-bg': '#FFF0F0',
+              'error-border': '#FFD6D6',
+              'error-text': '#D92D2D',
+            },
+            fontFamily: {
+              sans: [
+                'system-ui',
+                '-apple-system',
+                'BlinkMacSystemFont',
+                '"Segoe UI"',
+                'Roboto',
+                '"Helvetica Neue"',
+                'Arial',
+                '"Noto Sans"',
+                'sans-serif',
+              ],
+            },
+            borderRadius: {
+              'xl': '1rem', // 16px
+              '2xl': '1.25rem', // 20px
+              '3xl': '1.5rem', // 24px
+            },
+            boxShadow: {
+              'soft': '0 1px 3px 0 rgba(0, 0, 0, 0.07)',
+              'soft-md': '0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05)',
+              'soft-lg': '0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05)',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'modal-in': 'modalIn 0.3s ease-out forwards',
+              'slide-in-right': 'slideInRight 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: 0, transform: 'translateY(10px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+              modalIn: {
+                '0%': { opacity: 0, transform: 'scale(0.98)' },
+                '100%': { opacity: 1, transform: 'scale(1)' },
+              },
+              slideInRight: {
+                '0%': { transform: 'translateX(100%)' },
+                '100%': { transform: 'translateX(0)' },
+              },
+              floatUp: {
+                '0%': {
+                  transform: 'translateY(10vh)',
+                  opacity: 0,
+                },
+                '10%': {
+                  opacity: 1,
+                },
+                '90%': {
+                  opacity: 1,
+                },
+                '100%': {
+                  transform: 'translateY(-100vh)',
+                  opacity: 0,
+                },
+              },
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.16.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-light-bg font-sans text-text-primary">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "AI Merch Genesis",
+  "description": "An AI-powered t-shirt design shop. Users enter a prompt, and the application generates stunning, unique shirt designs on demand using generative AI, displayed in a modern e-commerce interface.",
+  "requestFramePermissions": []
+}
